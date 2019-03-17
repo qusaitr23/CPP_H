@@ -1,14 +1,16 @@
 #!/bin/bash
-
+#intellize our variabels
 _Path=$1
 _Program=$2
+#intellize the Path 
 cd $1
-	
+#Checking if The Folder Contain's Makefile if not Print Out to screen "There's no such File called Makefile"
+#and if we have the makefile we run it.
 if [ -f "Makefile" ]; then
  make &> /dev/null 
  
 _Comp=$?
-
+#Checking 
  if [[ $_Comp == 0 ]]; then
 	
   _Ans0="Pass"
